@@ -1,4 +1,4 @@
-package jiraticket
+package main
 
 import (
 	"fmt"
@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+
 	r := gin.Default()
 	name := "test"
 	fmt.Println(name)

@@ -1,11 +1,13 @@
 .PHONY: proto
 
+OUTDIR = model/
+
 clean:
-	rm proto/*.pb.go
+	rm $(OUTDIR)/*.pb.go
 
 proto:
 	@echo " > Generating proto files"
-	@protoc -I proto/ --go_out=. ./proto/*.proto
+	@protoc -I $(OUTDIR)/ --go_out=. ./$(OUTDIR)/*.proto
 
 ls: 
 	ls

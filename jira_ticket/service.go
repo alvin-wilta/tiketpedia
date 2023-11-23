@@ -1,0 +1,5 @@
+package jiraticket
+
+func GetAllJiraTicket() {
+
+}

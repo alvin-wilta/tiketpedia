@@ -1,9 +1,6 @@
 syntax = "proto3";
-option go_package = "./proto";
-
-
-message HealthCheckRequest {
-}
+option go_package = "./model";
+import "google/protobuf/Empty.proto";
 
 message HealthCheckResponse {
     bool ok = 1;
@@ -31,18 +28,13 @@ message Ticket {
     string name = 4;
 }
 
-message GetAllJiraTicketRequest {
-}
-
-
-
 message GetAllJiraTicketResponse {
     repeated Ticket tickets = 1;
 }
 
 service JiraService {
-    rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
+    rpc HealthCheck(google.protobuf.Empty) returns (HealthCheckResponse);
     rpc CreateJiraTicket(CreateJiraTicketRequest) returns (CreateJiraTicketResponse);
     rpc GetOneJiraTicket(GetOneJiraTicketRequest) returns (Ticket);
-    rpc GetAllJiraTicket(GetAllJiraTicketRequest) returns (GetAllJiraTicketResponse);
+    rpc GetAllJiraTicket(google.protobuf.Empty) returns (GetAllJiraTicketResponse);
 }
