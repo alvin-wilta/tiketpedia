@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	pb "github.com/alvinwilta/go-backend/jira_ticket/model"
+	pb "github.com/alvin-wilta/tiketpedia/jiraticket/model"
 )
 
 func Test_CreateJiraTicket(t *testing.T) {
