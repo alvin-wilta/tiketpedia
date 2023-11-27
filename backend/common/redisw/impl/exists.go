@@ -1,8 +1,14 @@
 package impl
 
-import "context"
+import (
+	"context"
+	"fmt"
+)
 
-func (r *repository) Exists(ctx context.Context, key string) (bool, error) {
-	// TODO: Implement
-	return true, nil
+func (r *repository) Exists(ctx context.Context, key string) (int64, error) {
+	result, err := r.redisConn.Exists(ctx, key).Result()
+	if err != nil {
+		return 0, fmt.Errorf("[Redis][EXIST] %v", err)
+	}
+	return result, nil
 }

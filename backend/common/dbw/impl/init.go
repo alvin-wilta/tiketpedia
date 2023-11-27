@@ -1,19 +1,18 @@
 package impl
 
 import (
-	"database/sql"
-
 	"github.com/alvin-wilta/tiketpedia/backend/common/dbw"
+	"github.com/jmoiron/sqlx"
 )
 
 type repository struct {
-	sqlConn  *sql.DB
-	maxRetry int
+	service string
+	sqlConn *sqlx.DB
 }
 
-func New(sqlConn *sql.DB, maxRetry int) dbw.Repository {
+func New(service string, sqlConn *sqlx.DB) dbw.Repository {
 	return &repository{
-		sqlConn:  sqlConn,
-		maxRetry: maxRetry,
+		service: service,
+		sqlConn: sqlConn,
 	}
 }
