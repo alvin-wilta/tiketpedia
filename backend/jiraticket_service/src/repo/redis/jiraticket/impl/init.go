@@ -1,8 +1,8 @@
 package impl
 
 import (
-	"github.com/alvin-wilta/tiketpedia/backend/jiraticket/src/repo/redis/jiraticket"
-	"github.com/go-redis/redis/v8"
+	"github.com/alvin-wilta/tiketpedia/backend/jiraticket_service/src/repo/redis/jiraticket"
+	"github.com/go-redis/redis"
 )
 
 type repository struct {

@@ -1,7 +1,7 @@
 package impl
 
 import (
-	"github.com/alvin-wilta/tiketpedia/backend/jiraticket/src/repo/db/jiraticket"
+	"github.com/alvin-wilta/tiketpedia/backend/jiraticket_service/src/repo/db/jiraticket"
 	"github.com/jmoiron/sqlx"
 )
 

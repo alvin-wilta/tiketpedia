@@ -3,10 +3,11 @@ package impl
 import (
 	"context"
 
-	"github.com/alvin-wilta/tiketpedia/backend/jiraticket/src/model"
+	std "github.com/alvin-wilta/tiketpedia/backend/common/model"
+	"github.com/alvin-wilta/tiketpedia/backend/jiraticket_service/src/model"
 )
 
-func (r *repository) SetJiraTicketStatus(ctx context.Context, setJiraTicketStatusRequest model.SetJiraTicketStatusRequest) (model.StandardResponse, error) {
+func (r *repository) SetJiraTicketStatus(ctx context.Context, setJiraTicketStatusRequest model.SetJiraTicketStatusRequest) (std.StandardResponse, error) {
 	// TODO: Implement
-	return model.StandardResponse{}, nil
+	return std.StandardResponse{}, nil
 }

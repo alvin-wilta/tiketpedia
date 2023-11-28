@@ -41,3 +41,8 @@ type SetJiraTicketStatusRequest struct {
 	TicketId int32
 	Status   string
 }
+
+type SetJiraTicketStatusResponse struct {
+	JiraTicket JiraTicket
+	Success    bool
+}
